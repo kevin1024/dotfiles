@@ -1,0 +1,33 @@
+URxvt.font: xft:Terminus:pixelsize=20:antialias=false
+URxvt.boldFont: xft:Terminus:bold:pixelsize=20:antialias=false
+
+*background: #222222
+*foreground: #eeeeee
+
+
+URxvt.color0: #333333
+URxvt*color8: #666666
+URxvt.color1: #d15517
+URxvt*color9: #d11723
+URxvt.color2: #36b217
+URxvt*color10: #00d56a
+URxvt.color3: #d1b217
+URxvt*color11: #ffea55
+URxvt*color4: #55aaff
+URxvt*color12: #1793d1
+URxvt*color5: #b217d1
+URxvt*color13: #d11793
+URxvt.color6: #93d1b2
+URxvt*color14: #17d1b2
+URxvt*color7: #eeeeee
+URxvt*color15: #ffffff
+
+URxvt*geometry:         	112x22  
+URxvt*scrollBar:        	false
+URxvt*scrollColor:        	#000000
+URxvt.urgentOnBell:		true
+
+URxvt*perl-ext-common: default,matcher
+URxvt*urlLauncher: uzbl_launch.sh
+URxvt*colorURL: #86a2be
+URxvt*matcher.button: 1

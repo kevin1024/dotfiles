@@ -1,5 +1,5 @@
 set nocompatible               " be iMproved
-filetype off                   " required!
+filetype off                   " required for Vundle
 
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
@@ -10,6 +10,7 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'msanders/snipmate.vim'
 Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
+Bundle 'altercation/vim-colors-solarized'
 " vim-scripts repos
 Bundle 'pyflakes.vim'
 Bundle 'python.vim'
@@ -36,6 +37,24 @@ setlocal smarttab
 setlocal expandtab
 
 set incsearch
+set hlsearch
 set ignorecase
 set smartcase
 syntax on
+
+" Highlight whitespace
+set list
+set listchars=tab:>.,trail:.,extends:#,nbsp:.
+
+
+if &t_Co >= 256 || has("gui_running")
+   set background=dark
+   colorscheme solarized
+   "colorscheme molokai
+   set guifont=Terminus\ 18
+endif
+
+if &t_Co > 2 || has("gui_running")
+   " switch syntax highlighting on, when the terminal has colors
+   syntax on
+endif

@@ -8,3 +8,7 @@ install-vim:
 	git clone http://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
 	vim -c ":BundleInstall"
 
+
+install-xdefaults:
+	rm -rf ~/.Xdefaults
+	ln -s `pwd`/Xdefaults ~/.Xdefaults
