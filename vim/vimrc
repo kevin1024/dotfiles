@@ -1,0 +1,41 @@
+set nocompatible               " be iMproved
+filetype off                   " required!
+
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+Bundle 'gmarik/vundle'
+Bundle 'tpope/vim-surround'
+Bundle 'tpope/vim-fugitive'
+Bundle 'Lokaltog/vim-easymotion'
+Bundle 'msanders/snipmate.vim'
+Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
+" vim-scripts repos
+Bundle 'pyflakes.vim'
+Bundle 'python.vim'
+Bundle 'indentpython.vim'
+" non github repos
+Bundle 'git://git.wincent.com/command-t.git'
+
+filetype plugin indent on     " required for vundle
+
+
+"turn on status line
+set laststatus=2
+"adapted from tpope
+set statusline=[%n]\ %<%.99f\ %h%w%m%r%y%{fugitive#statusline()}%#ErrorMsg#%*%=%-14.(%l,%c%V%)\ %P
+
+
+"set good PEP-8 defaults. 
+"TODO: make this only apply to python files
+setlocal tabstop=4
+setlocal softtabstop=4
+setlocal shiftwidth=4
+setlocal textwidth=80
+setlocal smarttab
+setlocal expandtab
+
+set incsearch
+set ignorecase
+set smartcase
+syntax on
