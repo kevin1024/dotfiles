@@ -1,4 +1,4 @@
-all: install-vim
+all: install-vim install-xdefaults install-sshconfig install-xmonad
 
 install-vim:
 	rm -rf ~/.vim ~/.vimrc
@@ -8,7 +8,16 @@ install-vim:
 	git clone http://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
 	vim -c ":BundleInstall"
 
-
 install-xdefaults:
-	rm -rf ~/.Xdefaults
+	rm -f ~/.Xdefaults
 	ln -s `pwd`/Xdefaults ~/.Xdefaults
+
+install-sshconfig:
+	rm -f ~/.ssh/config
+	mkdir -p ~/.ssh/
+	ln -s `pwd`/ssh_config ~/.ssh/config
+
+install-xmonad:
+	rm -f ~/.xmonad/xmonad.hs
+	mkdir -p ~/.xmonad/
+	ln -s `pwd`/xmonad.hs ~/.xmonad/xmonad.hs

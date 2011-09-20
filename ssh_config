@@ -1,0 +1,17 @@
+ServerAliveInterval 60
+
+Host 8
+HostName 98.129.6.188
+user deploy
+
+Host 7
+HostName 98.129.6.187
+user kevin
+
+Host 60
+HostName 67.192.111.60
+user deploy
+
+Host 61
+HostName 67.192.111.61
+user deploy
