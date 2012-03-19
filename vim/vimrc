@@ -8,8 +8,6 @@ Bundle 'gmarik/vundle'
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-fugitive'
 Bundle 'Lokaltog/vim-easymotion'
-Bundle 'msanders/snipmate.vim'
-Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
 Bundle 'altercation/vim-colors-solarized'
 " vim-scripts repos
 Bundle 'pyflakes.vim'
@@ -40,11 +38,12 @@ set incsearch
 set hlsearch
 set ignorecase
 set smartcase
-syntax on
 
 " Highlight whitespace
 set list
 set listchars=tab:>.,trail:.,extends:#,nbsp:.
+
+let mapleader=","
 
 
 if &t_Co >= 256 || has("gui_running")

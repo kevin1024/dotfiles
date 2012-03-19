@@ -7,6 +7,7 @@ install-vim:
 	ln -s ~/.vim/vimrc ~/.vimrc
 	git clone http://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
 	vim -c ":BundleInstall"
+	cd ~/.vim/bundle/command-t/ruby/command-t && ruby extconf.rb && make
 
 install-xdefaults:
 	rm -f ~/.Xdefaults
